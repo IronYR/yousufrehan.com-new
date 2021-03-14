@@ -36,7 +36,7 @@ export default function Header() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root} style={{ fontWeight: "" }}>
+        <div className={classes.root} >
             <AppBar position="static" color="transparent">
                 <Toolbar>
                     <ThemeProvider theme={theme}>
