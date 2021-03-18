@@ -14,7 +14,7 @@ import Post from '../components/Post';
 //     ].join(','),
 //   },
 // });
-const BLOG_POSTS_PATH = "../content/";
+// const BLOG_POSTS_PATH = "../content/";
 
 const importBlogPosts = async () => {
   // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const blogPostsFolder = "./content";
+// const blogPostsFolder = "./content";
 // const getPathsForPosts = () => {
 //     return fs
 //         .readdirSync(blogPostsFolder)
