@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
-export default function Layout({ children, title }) {
+export default function Layout({ children }) {
     const theme = createMuiTheme({
         typography: {
             fontFamily: [
