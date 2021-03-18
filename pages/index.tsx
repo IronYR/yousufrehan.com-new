@@ -74,8 +74,7 @@ export default function Home(props) {
       {posts?.map(post => {
         return (
           <div key={Math.random()}>
-            <Post title={post.attributes.title} tags={["Rants", "Essay"]} date={post.attributes.date} slug={post.slug} />
-
+            <Post title={post.attributes.posttitle} tags={["Rants", "Essay"]} date={post.attributes.date} slug={post.slug} />
           </div>
         )
       })}

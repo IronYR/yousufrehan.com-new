@@ -1,5 +1,6 @@
 ---
-title: "Testing one o one"
+title: "test"
+posttile: "Testing one o one"
 ---
 
 

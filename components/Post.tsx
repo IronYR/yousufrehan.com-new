@@ -30,6 +30,7 @@ const style = makeStyles((theme) => ({
 }))
 export default function Post(props: { title: string, tags: string[], date: string, slug: string }) {
     const classes = style();
+    let date = new Date(Date.parse(props.date)).toDateString()
     return (
         <Card className={classes.card}>
             <Container style={{ margin: "10px auto" }}>
@@ -42,7 +43,7 @@ export default function Post(props: { title: string, tags: string[], date: strin
                     </Link>
                 </div>
                 <div className={classes.subtitle}>
-                    <span>{props.date}</span>
+                    <span>{date}</span>
                     {props?.tags?.map((tag) => (
                         // <Chip color="secondary" component={
                         <Tag tag={tag} />

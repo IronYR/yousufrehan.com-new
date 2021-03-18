@@ -59,7 +59,7 @@ export default function Header(props) {
             <Container style={{ margin: "20px auto", fontSize: 34 }}>
                 <Paper variant="outlined" style={{ backgroundColor: "inherit", color: "#BE8080", borderBottomWidth: "0" }}>
                     {/* Writing about whatever comes to my mind */}
-                    {props.title}
+                    {props.title == undefined || !props.title ? "Writing about whatever comes to my mind" : props.title}
                 </Paper>
                 <hr color="#BE8080" />
             </Container>
