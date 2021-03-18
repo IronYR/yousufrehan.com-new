@@ -28,7 +28,7 @@ const style = makeStyles((theme) => ({
 
     }
 }))
-export default function Post(props: { title: string, tags: string[], date: string, slug: string }) {
+export default function Post(props: { title: string, tags?: string[], date: string, slug: string }) {
     const classes = style();
     let date = new Date(Date.parse(props.date)).toDateString()
     return (
@@ -36,7 +36,7 @@ export default function Post(props: { title: string, tags: string[], date: strin
             <Container style={{ margin: "10px auto" }}>
 
                 <div className={classes.title}>
-                    <Link href={`posts/${props.slug}`}>
+                    <Link href={`/${props.slug}`}>
                         <a>
                             {props.title}
                         </a>

@@ -1,11 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Header from '../components/Header'
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
-import Link from "next/link"
+import { useRouter } from "next/router"
 import React from 'react';
 import Post from '../components/Post';
+import Heading from '../components/Heading';
 // const theme = createMuiTheme({
 //   typography: {
 //     fontFamily: [
@@ -69,12 +65,15 @@ export async function getStaticProps() {
 // }
 export default function Home(props) {
   const { posts } = props;
+  let router = useRouter();
+  console.log(router);
   return (
     <React.Fragment>
+      <Heading title="Writing whatever comes to my mind" />
       {posts?.map(post => {
         return (
           <div key={Math.random()}>
-            <Post title={post.attributes.posttitle} tags={["Rants", "Essay"]} date={post.attributes.date} slug={post.slug} />
+            <Post title={post.attributes.posttitle} date={post.attributes.date} slug={post.slug} />
           </div>
         )
       })}

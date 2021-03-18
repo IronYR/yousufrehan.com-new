@@ -1,13 +1,14 @@
 import React from 'react'
 import fs from "fs";
 import path from "path";
+import Heading from '../components/Heading';
 // import { serialize, deserialize } from "react-serialize"
 export async function getStaticProps(ctx) {
     // let attributes, BaseComponent;
     let { params } = ctx;
     console.log(ctx);
     // let mds;
-    let md = await import("../../content/" + params.slug + ".md");
+    let md = await import("../content/" + params.slug + ".md");
     console.log(md);
     return {
         props: {
@@ -33,10 +34,12 @@ export function getStaticPaths() {
     }
 }
 export default function all(props) {
+    let date = new Date(Date.parse(props.attributes.date)).toDateString()
     console.log(props);
     return (
         <div>
-            <div>
+            <Heading title={props.attributes.posttitle} date={date} />
+            <div style={{ fontSize: "1.3rem", lineHeight: 2 }}>
                 {/* <p>{props?.attributes?.title}</p> */}
                 <div dangerouslySetInnerHTML={{ __html: props?.html }}></div>
             </div>

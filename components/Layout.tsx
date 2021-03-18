@@ -15,7 +15,7 @@ export default function Layout({ children, title }) {
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
-                <Header title={title} />
+                <Header /*title={title}*/ />
                 <Container>
                     {children}
                 </Container>
