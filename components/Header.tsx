@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Header() {
+export default function Header(props) {
     const theme = createMuiTheme({
         typography: {
             fontFamily: [
@@ -39,26 +39,27 @@ export default function Header() {
         <div className={classes.root} >
             <AppBar position="static" color="transparent">
                 <Toolbar>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="h4" className={classes.title}>
-                            YR
+                    {/* <ThemeProvider theme={theme}> */}
+                    <Typography variant="h4" className={classes.title}>
+                        <Link href="#"><a>YR</a></Link>
                     </Typography>
-                        <Typography variant="h6" className={classes.links}>
-                            <Link href="#"><a /* style={{ color: "white" }}*/ className="primary">Home</a></Link>
-                        </Typography>
-                        <Typography variant="h6" className={classes.links}>
+                    <Typography variant="h6" className={classes.links}>
+                        <Link href="#"><a /* style={{ color: "white" }}*/ className="primary">Home</a></Link>
+                    </Typography>
+                    {/* <Typography variant="h6" className={classes.links}>
                             <Link href="#"><a className="primary">Blog</a></Link>
-                        </Typography>
-                        <Typography variant="h6" className={classes.links}>
-                            <Link href="#"><a className="primary">About</a></Link>
-                        </Typography>
-                    </ThemeProvider>
+                        </Typography> */}
+                    <Typography variant="h6" className={classes.links}>
+                        <Link href="#"><a className="primary">About</a></Link>
+                    </Typography>
+                    {/* </ThemeProvider> */}
 
                 </Toolbar>
             </AppBar>
             <Container style={{ margin: "20px auto", fontSize: 34 }}>
                 <Paper variant="outlined" style={{ backgroundColor: "inherit", color: "#BE8080", borderBottomWidth: "0" }}>
-                    Writing about whatever comes to my mind
+                    {/* Writing about whatever comes to my mind */}
+                    {props.title}
                 </Paper>
                 <hr color="#BE8080" />
             </Container>

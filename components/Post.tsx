@@ -1,4 +1,6 @@
 import React from 'react'
+// import Chip from "@material-ui/core/Chip"
+import Link from "next/link"
 import { Card, Container, makeStyles, Typography } from '@material-ui/core/index'
 import Tag from "./Tag"
 const style = makeStyles((theme) => ({
@@ -28,16 +30,26 @@ const style = makeStyles((theme) => ({
 }))
 export default function Post(props: { title: string, tags: string[], date: string }) {
     const classes = style();
-
+    let id = "/posts/home"
     return (
         <Card className={classes.card}>
             <Container style={{ margin: "10px auto" }}>
 
-                <div className={classes.title}>{props.title}</div>
+                <div className={classes.title}>
+                    <Link href={id}>
+                        <a>
+                            {props.title}
+                        </a>
+                    </Link>
+                </div>
                 <div className={classes.subtitle}>
                     <span>{props.date}</span>
                     {props?.tags?.map((tag) => (
+                        // <Chip color="secondary" component={
                         <Tag tag={tag} />
+                        // Tag(tag)
+                        // "SDFdsf"
+                        // } />
                     ))}
                 </div>
             </Container>
