@@ -1,12 +1,12 @@
 const fs = require("fs");
-const blogPostsFolder = "./content/";
-const getPathsForPosts = () => {
+const blogPostsFolder = "./content";
+export const getPathsForPosts = () => {
     return fs
         .readdirSync(blogPostsFolder)
         .map(blogName => {
             const trimmedName = blogName.substring(0, blogName.length - 3);
             return {
-                [`/blog/post/${trimmedName}`]: {
+                [`/posts/${trimmedName}`]: {
                     page: '/posts/[slug]',
                     query: {
                         slug: trimmedName,

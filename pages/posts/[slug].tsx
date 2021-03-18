@@ -2,10 +2,13 @@ import React from 'react'
 import fs from "fs";
 import path from "path";
 // import { serialize, deserialize } from "react-serialize"
-export async function getInitialProps({ query }) {
+export async function getStaticProps(ctx) {
     // let attributes, BaseComponent;
+    let { params } = ctx;
+    console.log(ctx);
     // let mds;
-    let md = await import("../../content/" + query.slug + ".md");
+    let md = await import("../../content/" + params.slug + ".md");
+    console.log(md);
     return {
         props: {
             attributes: md.default.attributes,
@@ -14,28 +17,28 @@ export async function getInitialProps({ query }) {
 
     }
 }
-// export function getStaticPaths() {
-//     // i have to give an arrat with post name
-//     const postsDirectory = path.join(process.cwd(), 'content')
-//     const fileNames = fs.readdirSync(postsDirectory)
-//     const allNames = fileNames.map((fileName) => {
-//         const id = fileName.replace(/\.md$/, '')
-//         return {
-//             params: { slug: id }
-//         }
-//     })
-//     return {
-//         paths: allNames,
-//         fallback: false
-//     }
-// }
+export function getStaticPaths() {
+    // i have to give an arrat with post name
+    const postsDirectory = path.join(process.cwd(), 'content')
+    const fileNames = fs.readdirSync(postsDirectory)
+    const allNames = fileNames.map((fileName) => {
+        const trimmedName = fileName.substring(0, fileName.length - 3);
+        return {
+            params: { slug: trimmedName }
+        }
+    })
+    return {
+        paths: allNames,
+        fallback: false
+    }
+}
 export default function all(props) {
-    // console.log(props);
+    console.log(props);
     return (
         <div>
             <div>
-                <p>{props?.attributes?.title}</p>
-                <div dangerouslySetInnerHTML={{ __html: props.html }}></div>
+                {/* <p>{props?.attributes?.title}</p> */}
+                <div dangerouslySetInnerHTML={{ __html: props?.html }}></div>
             </div>
 
         </div>

@@ -28,15 +28,14 @@ const style = makeStyles((theme) => ({
 
     }
 }))
-export default function Post(props: { title: string, tags: string[], date: string }) {
+export default function Post(props: { title: string, tags: string[], date: string, slug: string }) {
     const classes = style();
-    let id = "/posts/home"
     return (
         <Card className={classes.card}>
             <Container style={{ margin: "10px auto" }}>
 
                 <div className={classes.title}>
-                    <Link href={id}>
+                    <Link href={`posts/${props.slug}`}>
                         <a>
                             {props.title}
                         </a>

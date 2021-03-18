@@ -73,12 +73,10 @@ export default function Home(props) {
     <React.Fragment>
       {posts?.map(post => {
         return (
-          <Link href={`posts/${post.slug}`}>
-            <a>
-              <Post title={post.attributes.title} tags={["Rants", "Essay"]} date={post.attributes.date} />
+          <div key={Math.random()}>
+            <Post title={post.attributes.title} tags={["Rants", "Essay"]} date={post.attributes.date} slug={post.slug} />
 
-            </a>
-          </Link>
+          </div>
         )
       })}
       {/* // <ThemeProvider theme={theme}> */}
@@ -89,7 +87,7 @@ export default function Home(props) {
       <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
       <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" /> */}
       {/* // </ThemeProvider> */}
-    </React.Fragment>
+    </React.Fragment >
 
   )
 }
