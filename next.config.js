@@ -1,6 +1,6 @@
 const fs = require("fs");
 const blogPostsFolder = "./content";
-export const getPathsForPosts = () => {
+const getPathsForPosts = () => {
     return fs
         .readdirSync(blogPostsFolder)
         .map(blogName => {
