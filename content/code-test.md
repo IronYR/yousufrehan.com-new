@@ -1,6 +1,7 @@
 ---
-title: code-test
 posttitle: Testing code snippets
+title: code-test
+date: 2021-03-19T00:24:58.663Z
 ---
 TEst
 
