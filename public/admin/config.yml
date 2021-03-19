@@ -31,7 +31,7 @@ collections:
     label: "Blog"
     folder: "content/"
     create: true
-    identifier_field: posttitle
+    # identifier_field: posttitle
     # filter: {field: "Rants", value: true}/
     fields:
       - { label: "PostTitle", name: "posttitle", widget: "string"}

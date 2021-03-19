@@ -22,7 +22,7 @@ const importBlogPosts = async () => {
     .map(relativePath => relativePath.substring(2));
   return Promise.all(
     markdownFiles.map(async path => {
-      console.log(path);
+      // console.log(path);
       const markdown = await import(`../content/${path}`);
       return { ...markdown, slug: path.substring(0, path.length - 3) };
     })
@@ -30,7 +30,7 @@ const importBlogPosts = async () => {
 };
 export async function getStaticProps() {
   const postsList = await importBlogPosts();
-  console.log(postsList);
+  // console.log(postsList);
   return { props: { posts: postsList } }
 }
 // import { serialize, deserialize } from "react-serialize"
@@ -66,7 +66,7 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { posts } = props;
   let router = useRouter();
-  console.log(router);
+  // console.log(router);
   return (
     <React.Fragment>
       <Heading title="Writing whatever comes to my mind" />

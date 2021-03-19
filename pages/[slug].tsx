@@ -6,10 +6,10 @@ import Heading from '../components/Heading';
 export async function getStaticProps(ctx) {
     // let attributes, BaseComponent;
     let { params } = ctx;
-    console.log(ctx);
+    // console.log(ctx);
     // let mds;
     let md = await import("../content/" + params.slug + ".md");
-    console.log(md);
+    // console.log(md);
     return {
         props: {
             attributes: md.default.attributes,
@@ -35,7 +35,7 @@ export function getStaticPaths() {
 }
 export default function all(props) {
     let date = new Date(Date.parse(props.attributes.date)).toDateString()
-    console.log(props);
+    // console.log(props);
     return (
         <div>
             <Heading title={props.attributes.posttitle} date={date} />
