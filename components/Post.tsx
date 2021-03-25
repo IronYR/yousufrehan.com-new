@@ -15,7 +15,7 @@ const style = makeStyles((theme) => ({
     },
     title: {
         color: "white",
-        fontSize: 28
+        fontSize: 28,
     },
     subtitle: {
         fontSize: 13,
@@ -38,7 +38,9 @@ export default function Post(props: { title: string, tags?: string[], date: stri
                 <div className={classes.title}>
                     <Link href={`/${props.slug}`}>
                         <a>
-                            {props.title}
+                            <div>
+                                {props.title}
+                            </div>
                         </a>
                     </Link>
                 </div>
