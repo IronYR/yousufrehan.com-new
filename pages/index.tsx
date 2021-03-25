@@ -2,6 +2,8 @@ import { useRouter } from "next/router"
 import React from 'react';
 import Post from '../components/Post';
 import Heading from '../components/Heading';
+
+import { motion } from "framer-motion"
 // const theme = createMuiTheme({
 //   typography: {
 //     fontFamily: [
@@ -63,28 +65,41 @@ export async function getStaticProps() {
 //     fallback: false
 //   }
 // }
+const postVariants = {
+  initial: { scale: 0.96, y: 30, opacity: 0 },
+  enter: { scale: 1, y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
+  exit: {
+    scale: 0.6,
+    y: 100,
+    opacity: 0,
+    transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
+  }
+};
 export default function Home(props) {
   const { posts } = props;
   let router = useRouter();
   // console.log(router);
   return (
     <React.Fragment>
-      <Heading title="Writing whatever comes to my mind" />
-      {posts?.map(post => {
-        return (
-          <div key={Math.random()}>
-            <Post title={post.attributes.posttitle} date={post.attributes.date} slug={post.slug} />
-          </div>
-        )
-      })}
-      {/* // <ThemeProvider theme={theme}> */}
-      {/* <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
-      <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
-      <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
-      <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
-      <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" />
-      <Post title="Schools make kids less creative" tags={["Rants", "Essay"]} date="20 December, 2021" /> */}
-      {/* // </ThemeProvider> */}
+      <motion.div
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+      >
+        <motion.div variants={postVariants}>
+          <Heading title="Writing whatever comes to my mind" />
+        </motion.div>
+        {posts?.map(post => {
+          return (
+            <div key={Math.random()}>
+              <motion.div variants={postVariants}>
+                <Post title={post.attributes.posttitle} date={post.attributes.date} slug={post.slug} />
+              </motion.div>
+            </div>
+          )
+        })}
+      </motion.div>
     </React.Fragment >
 
   )
