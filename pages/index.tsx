@@ -75,6 +75,18 @@ const postVariants = {
     transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
   }
 };
+let easing = [0.175, 0.85, 0.42, 0.96];
+
+const headingVariants = {
+  exit: { opacity: 0, transition: { duration: 0.5, ease: easing } },
+  enter: {
+    opacity: 1,
+    transition: { delay: 0.1, duration: 0.5, ease: easing }
+  },
+  initial: { opacity: 0 },
+
+}
+
 export default function Home(props) {
   const { posts } = props;
   let router = useRouter();
@@ -87,9 +99,10 @@ export default function Home(props) {
         exit="exit"
         variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
       >
-        <motion.div variants={postVariants}>
+        <motion.div variants={headingVariants}>
           <Heading title="Writing whatever comes to my mind" />
         </motion.div>
+        <hr color="#BE8080" />
         {posts?.map(post => {
           return (
             <div key={Math.random()}>

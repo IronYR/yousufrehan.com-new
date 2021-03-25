@@ -44,14 +44,25 @@ const textVariants = {
         transition: { delay: 0.1, duration: 0.5, ease: easing }
     }
 };
+const headingVariants = {
+    exit: { opacity: 0, transition: { duration: 0.5, ease: easing } },
+    enter: {
+        opacity: 1,
+        transition: { delay: 0.1, duration: 0.5, ease: easing }
+    }
+}
 export default function all(props) {
     let date = new Date(Date.parse(props.attributes.date)).toDateString()
     // console.log(props);
     return (
         <div>
             <motion.div initial="exit" animate="enter" exit="exit">
-                <motion.div variants={textVariants}>
+                <motion.div variants={headingVariants}>
                     <Heading title={props.attributes.posttitle} date={date} />
+                </motion.div>
+                <hr color="#BE8080" />
+                <motion.div variants={textVariants}>
+
                     <div style={{ fontSize: "1.3rem", lineHeight: 2 }}>
                         {/* <p>{props?.attributes?.title}</p> */}
                         <div dangerouslySetInnerHTML={{ __html: props?.html }}></div>

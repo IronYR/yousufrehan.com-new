@@ -14,7 +14,7 @@ export default function Heading(props) {
                     <span style={{ fontSize: 20, color: "#686363" }}>{props.date}</span>
                 }
             </Paper>
-            <hr color="#BE8080" />
+            {/* <hr color="#BE8080" /> */}
             {/* </Container> */}
         </>
     )
