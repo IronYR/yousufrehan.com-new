@@ -3,7 +3,7 @@ posttitle: Managing Time
 title: time
 date: 2021-03-26T00:47:09.006Z
 ---
-#### Introduction
+### Introduction
 I started valuing my time when I realised that I was spending 11-13 hours on average on my phone. And I wasn't doing anything productive either. Just mindlessly scrolling my life away. After crunching some numbers, I realised that I was spending 40% of my year on social media!
 
 The catalyst for this inspection was the fact that I was angry that I didn't have time to do things I wanted to do. Which, at the time, included reading more, writing, learning to play the piano, and learning to program.
@@ -15,7 +15,7 @@ I realised that I was the one wasting my time and I wasn't even aware of it. I w
 
 So I started to put utmost importance on my time and where it was going. To tell the truth, I think I was taking it too far.
 
-#### Routine method
+### Routine method
 ﻿﻿I started to order each hour with a set schedule. I knew exactly what I had to do at what time. In theory, I should have had no time to waste.
 
 This went well for about two weeks. Then I burnt out. Hard. It took me a whole week to get back on track. So that routine didn't work too well. 
@@ -25,17 +25,17 @@ Another thing that happened is that I lost all or most original thoughts. I trie
 
 Each day became an image of the last, which is hardly any way to live. So I tried another method which was to just have a list of tasks for each day prepared the day before.
 
-#### Large number of tasks daily
+### Large number of tasks daily
 I overshot this method too, somedays having scheduled 10 big tasks. This went well for longer than the last method, about a month. 
  
 But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero. 
-
+﻿  
+  
+  
  
 But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero.
-But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero.
-But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero.
  
-#### 3 Big tasks and many small tasks
+### 3 Big tasks and many small tasks
 Then I came across the idea of having 3 big tasks each day, which, if complete, I would be able to call the day a productive one. These tasks would be descriptive but focused.
 
 And I could have many small tasks which even if I wasn't able to complete them, would have no or minimal effect on my trajectory. 
@@ -44,7 +44,7 @@ For example, the task "finish the landing page" would be a big task. While somet
 
 This is the method that has worked the best for me till now. I don't get burnt out but rather do more things when I schedule less. So until something exponentially better than this method comes up, this will be my go-to.
 
-#### Big Takeaways
+### Big Takeaways
 - If you feel that you don't have time to do new things, do a deep inspection of how your typical day goes. Find the fat, and cut it.
 - When you find the things that you are wasting your time on the most, don't try to get rid of them entirely at first. Start small, like reducing your usage of them by 50% for a week, and then gradually cutting them off completely.
 - Don't overburden yourself with tasks to do daily. You will eventually burn out and may even experience some other harmful side effects.
