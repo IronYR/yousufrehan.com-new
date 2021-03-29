@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import Heading from '../components/Heading';
 import { motion } from "framer-motion"
+//@ts-ignore
+import classes from "github-markdown-css/github-markdown.module.css"
 // import { serialize, deserialize } from "react-serialize"
 export async function getStaticProps(ctx) {
     // let attributes, BaseComponent;
@@ -63,9 +65,19 @@ export default function all(props) {
                 <hr color="#BE8080" />
                 <motion.div variants={textVariants}>
 
-                    <div style={{ fontSize: "1.3rem", lineHeight: 2 }}>
+                    <div style={{ fontSize: "auto", lineHeight: "auto", color: "white" }}>
                         {/* <p>{props?.attributes?.title}</p> */}
-                        <div dangerouslySetInnerHTML={{ __html: props?.html }}></div>
+                        <div
+                            className={classes["markdown-body"]}
+                            style={{
+                                color: "white",
+                                lineHeight: "2",
+                                fontSize: "1.1rem",
+                                fontFamily: "Montserrat",
+                                letterSpacing: "0.25px"
+                            }}
+                            dangerouslySetInnerHTML={{ __html: props?.html }}
+                        />
                     </div>
                 </motion.div>
             </motion.div>

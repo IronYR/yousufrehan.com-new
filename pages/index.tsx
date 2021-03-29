@@ -90,6 +90,12 @@ const headingVariants = {
 export default function Home(props) {
   const { posts } = props;
   let router = useRouter();
+  posts.sort((a, b) => {
+    let dateA = new Date(Date.parse(a.attributes.date))
+    let dateB = new Date(Date.parse(b.attributes.date))
+    //@ts-ignore
+    return dateB - dateA
+  })
   // console.log(router);
   return (
     <React.Fragment>

@@ -29,11 +29,6 @@ Each day became an image of the last, which is hardly any way to live. So I trie
 I overshot this method too, somedays having scheduled 10 big tasks. This went well for longer than the last method, about a month. 
  
 But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero. 
-﻿  
-  
-  
- 
-But then I realized that I was doing the tasks half-assed, so by the looks of it I was being very productive and getting things done, but I was lying to myself and my list. For example, if a task was to do 1 chapter of chemistry, I would just skim the chapter and tick the box. In the end, the net result was zero.
  
 ### 3 Big tasks and many small tasks
 Then I came across the idea of having 3 big tasks each day, which, if complete, I would be able to call the day a productive one. These tasks would be descriptive but focused.
