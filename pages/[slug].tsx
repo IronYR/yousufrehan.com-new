@@ -4,7 +4,7 @@ import path from "path";
 import Heading from '../components/Heading';
 import { motion } from "framer-motion"
 //@ts-ignore
-import classes from "github-markdown-css/github-markdown.module.css"
+import classes from "../styles/github-markdown.module.css"
 // import { serialize, deserialize } from "react-serialize"
 export async function getStaticProps(ctx) {
     // let attributes, BaseComponent;
