@@ -42,7 +42,7 @@ export default function Header(props) {
                 <Toolbar>
                     {/* <ThemeProvider theme={theme}> */}
                     <Typography variant="h4" className={classes.title}>
-                        <Link href="/"><a>YR</a></Link>
+                        <Link href="/"><a>YSFR</a></Link>
                     </Typography>
                     <Typography variant="h6" className={classes.links}>
                         <Link href="/"><a /* style={{ color: "white" }}*/ className="primary">Home</a></Link>
