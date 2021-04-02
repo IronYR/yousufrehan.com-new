@@ -13,13 +13,13 @@ export default function Layout({ children }) {
         }
     })
     return (
-        <React.Fragment>
+        <Container maxWidth="md">
             <ThemeProvider theme={theme}>
                 <Header /*title={title}*/ />
                 <Container>
                     {children}
                 </Container>
             </ThemeProvider>
-        </React.Fragment>
+        </Container >
     )
 }
