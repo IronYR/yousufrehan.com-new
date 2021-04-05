@@ -4,6 +4,7 @@ import Post from '../components/Post';
 import Heading from '../components/Heading';
 
 import { motion } from "framer-motion"
+import Head from "next/head";
 // const theme = createMuiTheme({
 //   typography: {
 //     fontFamily: [
@@ -99,6 +100,15 @@ export default function Home(props) {
   // console.log(router);
   return (
     <React.Fragment>
+      <Head>
+        <title>YSFR's Blog</title>
+        <meta property="og:title" content="YSFR's Blog"></meta>
+        <meta name="description" content="Writing about books, productivity, tech and programming."></meta>
+        <meta property="og:description" content="Writing about books, productivity, tech and programming."></meta>
+
+        <link rel="canonical" href={`https://ysfr.dev/`}></link>
+        <meta property="og:url" content={`https://ysfr.dev/`}></meta>
+      </Head>
       <motion.div
         initial="initial"
         animate="enter"

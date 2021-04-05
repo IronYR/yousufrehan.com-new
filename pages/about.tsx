@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from "../components/Heading"
 import { motion } from "framer-motion"
+import Head from 'next/head';
 let easing = [0.175, 0.85, 0.42, 0.96];
 const headingVariants = {
     exit: { opacity: 0, transition: { duration: 0.5, ease: easing } },
@@ -19,14 +20,24 @@ const textVariants = {
 };
 export default function about() {
     return (
-        <motion.div initial="exit" animate="enter" exit="exit">
-            <motion.div variants={headingVariants}>
-                <Heading title="About me" />
+        <React.Fragment>
+            <Head>
+                <title>About YSFR</title>
+                <meta property="og:title" content="About YSFR"></meta>
+                <meta name="description" content="Ocassionally write"></meta>
+                <meta property="og:description" content="Ocassionally write"></meta>
+                <link rel="canonical" href={`https://ysfr.dev/about`}></link>
+                <meta property="og:url" content={`https://ysfr.dev/about`}></meta>
+            </Head>
+            <motion.div initial="exit" animate="enter" exit="exit">
+                <motion.div variants={headingVariants}>
+                    <Heading title="About me" />
+                </motion.div>
+                <hr color="#BE8080" />
+                <motion.div variants={textVariants}>
+                    <p style={{ fontSize: "1.4rem" }}>Occasionally write</p>
+                </motion.div>
             </motion.div>
-            <hr color="#BE8080" />
-            <motion.div variants={textVariants}>
-                <p style={{ fontSize: "1.4rem" }}>Occasionally write</p>
-            </motion.div>
-        </motion.div>
+        </React.Fragment>
     )
 }
