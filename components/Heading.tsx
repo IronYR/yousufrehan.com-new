@@ -8,8 +8,13 @@ export default function Heading(props) {
             {/* <Container style={{ margin: "20px auto", fontSize: 34 }}> */}
             <Paper variant="outlined" style={{ margin: "20px auto", fontSize: 34, backgroundColor: "inherit", color: "#BE8080", borderBottomWidth: "0" }}>
                 {/* Writing about whatever comes to my mind */}
-                {props.title == undefined || !props.title ? "Writing about whatever comes to my mind" : props.title}
-                <br />
+
+                {/* <span> */}
+                <h1 style={{ fontSize: "34px", margin: 0 }}>
+                    {props.title == undefined || !props.title ? "Writing about whatever comes to my mind" : props.title}
+                </h1>
+                {/* </span> */}
+                {/* <br /> */}
                 {props.date &&
                     <span style={{ fontSize: 20, color: "#686363" }}>{props.date}</span>
                 }

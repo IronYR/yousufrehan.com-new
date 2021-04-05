@@ -1,6 +1,7 @@
 ---
 posttitle: Introduction
 title: intro
+description: I will be writing whatever I find worth sharing, be that something I learned, something related to business, programming, books, movies, or anything.
 date: 2021-03-19T13:10:27.587Z
 ---
 I have started this blog due to an observation I had recently. 

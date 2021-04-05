@@ -4,29 +4,6 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  # - name: "pages"
-  #   label: "Pages"
-  #   files:
-  #   - label: "Home"
-  #     name: "home"
-  #     file: "content/home.md"
-  #     fields:
-  #       - { label: "Title", name: "title", widget: "string"}
-  #       - { label: "Publish Date", name: "date", widget: "datetime" }
-  #       - { label: "Body", name: "body", widget: "markdown"}
-  #       - label: 'Cats'
-  #         name: "cats"
-  #         widget: list
-  #         fields:
-  #           - { label: "Name", name: "name", widget: "string"}
-  #           - { label: "Description", name: "description", widget: "text"}
-  #   - label: "Add"
-  #     name: "add"
-  #     file: "content/add.md"
-  #     fields:
-  #       - { label: "Title", name: "title", widget: "string"}
-  #       - { label: "Publish Date", name: "date", widget: "datetime" }
-  #       - { label: "Body", name: "body", widget: "markdown"}
   - name: "blog"
     label: "Blog"
     folder: "content/"
@@ -36,5 +13,6 @@ collections:
     fields:
       - { label: "PostTitle", name: "posttitle", widget: "string"}
       - { label: "Title", name: "title", widget: "string"}
+      - { label: "Description", name: "description", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime"}
       - { label: "Body", name: "body", widget: "markdown"}

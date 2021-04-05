@@ -1,6 +1,7 @@
 ---
 posttitle: Managing Time
 title: time
+description: When you find the things that you are wasting your time on the most, don't try to get rid of them entirely at first. Start small, like reducing your usage of them by 50% for a week, and then gradually cutting them off completely.
 date: 2021-03-26T00:47:09.006Z
 ---
 ### Introduction

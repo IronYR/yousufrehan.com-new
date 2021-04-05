@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import Heading from '../components/Heading';
 import { motion } from "framer-motion"
+import Head from "next/head"
 //@ts-ignore
 import classes from "../styles/github-markdown.module.css"
 // import { serialize, deserialize } from "react-serialize"
@@ -55,9 +56,19 @@ const headingVariants = {
 }
 export default function all(props) {
     let date = new Date(Date.parse(props.attributes.date)).toDateString()
-    // console.log(props);
+
     return (
         <div>
+            <Head>
+                <title>{props.attributes.posttitle}</title>
+                <meta property="og:title" content={props.attributes.posttitle}></meta>
+                <meta name="description" content={props.attributes.description} />
+                <meta property="og:description" content={props.attributes.description} />
+                <meta property="og:type" content="article"></meta>
+                <meta property="article:modified_time" content={props.attributes.date}></meta>
+                <link rel="canonical" href={`https://ysfr.dev/${props.attributes.title}`}></link>
+                <meta property="og:url" content={`https://ysfr.dev/${props.attributes.title}`}></meta>
+            </Head>
             <motion.div initial="exit" animate="enter" exit="exit">
                 <motion.div variants={headingVariants}>
                     <Heading title={props.attributes.posttitle} date={date} />
