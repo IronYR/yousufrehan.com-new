@@ -10,17 +10,20 @@ export default function index() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: 20
+            padding: 20,
+            overflow: "none"
         },
         text: {
             fontSize: "5rem"
         }
     }
     return (
+        // <div style={{ minWidth: "100%", minHeight: "100%" }}>
         <div style={style.container}>
             <h1 style={style.text}>
                 Built Different
             </h1>
         </div>
+        // </div > 
     )
 }
