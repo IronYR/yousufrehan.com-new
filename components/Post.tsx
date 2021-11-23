@@ -6,7 +6,8 @@ import Tag from "./Tag"
 const style = makeStyles((theme) => ({
     card: {
         margin: "25px 0px",
-        backgroundColor: "#3A0D0D",
+        // backgroundColor: "#3A0D0D",
+        backgroundColor: "#000000",
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
@@ -14,7 +15,7 @@ const style = makeStyles((theme) => ({
         borderRadius: "15px"
     },
     title: {
-        color: "white",
+        color: "#BE8080",
         fontSize: 28,
     },
     subtitle: {
