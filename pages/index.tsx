@@ -101,13 +101,13 @@ export default function Home(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>YSFR's Blog</title>
-        <meta property="og:title" content="YSFR's Blog"></meta>
+        <title>Yousuf Rehan's Blog</title>
+        <meta property="og:title" content="Yousuf Rehan's Blog"></meta>
         <meta name="description" content="Writing about books, productivity, tech and programming."></meta>
         <meta property="og:description" content="Writing about books, productivity, tech and programming."></meta>
 
-        <link rel="canonical" href={`https://ysfr.dev/`}></link>
-        <meta property="og:url" content={`https://ysfr.dev/`}></meta>
+        <link rel="canonical" href={`https://yousufrehan.com/`}></link>
+        <meta property="og:url" content={`https://yousufrehan.com/`}></meta>
       </Head>
       <motion.div
         initial="initial"

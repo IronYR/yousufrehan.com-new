@@ -22,12 +22,12 @@ export default function about() {
     return (
         <React.Fragment>
             <Head>
-                <title>About YSFR</title>
-                <meta property="og:title" content="About YSFR"></meta>
+                <title>About Yousuf Rehan</title>
+                <meta property="og:title" content="About Yousuf Rehan"></meta>
                 <meta name="description" content="Ocassionally write"></meta>
                 <meta property="og:description" content="Ocassionally write"></meta>
-                <link rel="canonical" href={`https://ysfr.dev/about`}></link>
-                <meta property="og:url" content={`https://ysfr.dev/about`}></meta>
+                <link rel="canonical" href={`https://yousufrehan.com/about`}></link>
+                <meta property="og:url" content={`https://yousufrehan.com/about`}></meta>
             </Head>
             <motion.div initial="exit" animate="enter" exit="exit">
                 <motion.div variants={headingVariants}>

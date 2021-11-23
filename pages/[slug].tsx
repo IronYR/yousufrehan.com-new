@@ -66,8 +66,8 @@ export default function all(props) {
                 <meta property="og:description" content={props.attributes.description} />
                 <meta property="og:type" content="article"></meta>
                 <meta property="article:modified_time" content={props.attributes.date}></meta>
-                <link rel="canonical" href={`https://ysfr.dev/${props.attributes.title}`}></link>
-                <meta property="og:url" content={`https://ysfr.dev/${props.attributes.title}`}></meta>
+                <link rel="canonical" href={`https://yousufrehan.com/${props.attributes.title}`}></link>
+                <meta property="og:url" content={`https://yousufrehan.com/${props.attributes.title}`}></meta>
             </Head>
             <motion.div initial="exit" animate="enter" exit="exit">
                 <motion.div variants={headingVariants}>
